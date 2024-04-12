@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+       
+       function Handling(e){
+         e.preventDefault();
+       }
+        function onGreat(){
+          const name = document.getElementById('name');
+          const span = document.getElementById('span');
+         span.innerHTML = "," +" "+ name.value;
+         name.value = " ";
+        }
+
+        function red(){
+
+            const id = document.getElementById('red');
+            id.style.backgroundColor ="red";
+          
+            
+        }
+        function blue(){
+            const id = document.getElementById('blue');
+            id.style.backgroundColor ="blue";
+        }
+        function green(){
+            const id = document.getElementById('green');
+            id.style.backgroundColor ="green";
+        }
+        function yellow(){
+            const id = document.getElementById('yellow');
+            id.style.backgroundColor ="yellow";
+        }
+     
+    </script>
+</head>
+<body>
+    <nav class="navi">
+          <h1 class="center">Hello<span id="span"></span></h1>
+    </nav>
+    <div class="container">
+        <div class="flex">
+        <div id="red" onclick="red()" class="box">Red</div>
+        <div id="blue" onclick="blue()" class="box">Blue</div>
+        <div id="green" onclick="green()" class="box">Green</div>
+        <div id="yellow" onclick="yellow()" class="box">Yellow</div>
+    </div>
+   <form onsubmit="Handling(e)">
+        <input id="name" placeholder="Enter your name" type="text"/>
+        <button type="button" onclick="onGreat()">Great</button>
+    </form>
+</div>
+</body>
+</html>
